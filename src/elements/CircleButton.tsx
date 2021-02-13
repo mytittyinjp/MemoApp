@@ -1,8 +1,8 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
-import { Entypo, MaterialIcons } from "@expo/vector-icons";
+import { Entypo, MaterialIcons, AntDesign } from "@expo/vector-icons";
 
-type IconNameType = "plus" | "edit";
+type IconNameType = "plus" | "edit" | "check";
 
 type CircleButtonProps = {
   name: IconNameType;
@@ -36,6 +36,8 @@ const CustomIcon: React.FC<CustomIconProps> = (props) => {
       return <Entypo name="plus" size={size} color={color} />;
     case "edit":
       return <MaterialIcons name="edit" size={size} color={color} />;
+    case "check":
+      return <AntDesign name="check" size={size} color={color} />;
   }
 };
 
