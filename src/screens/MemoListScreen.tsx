@@ -8,7 +8,7 @@ const MemoListScreen: React.FC = () => {
   return (
     <View style={styles.container}>
       <MemoList />
-      <CircleButton>+</CircleButton>
+      <CircleButton name="plus" />
     </View>
   );
 };

@@ -20,9 +20,7 @@ const MemoDetailScreen: React.FC<Props> = (props) => {
       <View style={styles.memoContent}>
         <Text style={styles.memoContentText}>{props.content}</Text>
       </View>
-      <CircleButton color="white" style={styles.editButton}>
-        +
-      </CircleButton>
+      <CircleButton name="edit" color="white" style={styles.editButton} />
     </View>
   );
 };
@@ -59,7 +57,6 @@ const styles = StyleSheet.create({
   memoContentText: {},
   editButton: {
     top: 75,
-    backgroundColor: "#fff",
   },
 });
 
