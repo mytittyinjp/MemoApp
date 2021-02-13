@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import Appbar from "./src/components/Appbar";
-import MemoEditScreen from "./src/screens/MemoEditScreen";
+import SignupScreen from "./src/screens/SignupScreen";
 
 const memoDetail = {
   title: "講座のアイテム",
@@ -14,7 +14,7 @@ export default function App() {
     <View style={styles.container}>
       <Appbar title="MEMOT" />
       {/* <MemoDetailScreen {...memoDetail} /> */}
-      <MemoEditScreen />
+      <SignupScreen />
     </View>
   );
 }
