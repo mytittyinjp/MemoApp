@@ -1,10 +1,22 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
-const CircleButton: React.FC = (props) => {
+type Props = {
+  color?: string;
+  style?: any;
+};
+
+const CircleButton: React.FC<Props> = (props) => {
+  const { color, style, children } = props;
+
+  const bgColor = color === "white" ? "#fff" : "#E31767";
+  const textColor = color === "white" ? "#E31767" : "#fff";
+
   return (
-    <View style={styles.circleButton}>
-      <Text style={styles.circleButtonTitle}>{props.children}</Text>
+    <View style={[styles.circleButton, style, { backgroundColor: bgColor }]}>
+      <Text style={[styles.circleButtonTitle, { color: textColor }]}>
+        {children}
+      </Text>
     </View>
   );
 };
@@ -16,7 +28,6 @@ const styles = StyleSheet.create({
     right: 32,
     width: 48,
     height: 48,
-    backgroundColor: "#E31767",
     borderRadius: 24,
     justifyContent: "center",
     alignItems: "center",
@@ -27,7 +38,6 @@ const styles = StyleSheet.create({
   },
   circleButtonTitle: {
     fontSize: 35,
-    color: "#fff",
     lineHeight: 35,
   },
 });
